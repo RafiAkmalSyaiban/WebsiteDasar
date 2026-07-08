@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Nama Kamu</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <!-- Di React, bagian ini nanti akan menjadi komponen <Navbar /> -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#home" class="logo">MyPortfolio</a>
+
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#home" class="nav-link active" data-target="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-target="about">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-target="contact"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="container">
+      <!-- Section: HOME -->
+      <!-- Di React, ini akan menjadi komponen <Home /> -->
+      <section id="home" class="page active">
+        <div class="hero">
+          <img
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Portfolio"
+            alt="Foto Profil"
+            class="hero-img"
+          />
+          <h1>Halo, Saya <span class="highlight">Nama Kamu</span></h1>
+          <p class="subtitle">
+            Front-End Developer &mdash; suka membangun website yang rapi dan
+            interaktif.
+          </p>
+          <a href="#contact" class="btn nav-link" data-target="contact"
+            >Hubungi Saya</a
+          >
+        </div>
+      </section>
+
+      <!-- Section: ABOUT -->
+      <!-- Di React, ini akan menjadi komponen <About /> -->
+      <section id="about" class="page">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-content">
+          <p>
+            Saya adalah seorang pengembang web yang tertarik pada pembuatan
+            antarmuka pengguna (UI) yang bersih dan fungsional. Project
+            portofolio ini dibuat menggunakan HTML, CSS, dan JavaScript dasar,
+            dan strukturnya sengaja dibuat mirip komponen agar mudah dipindahkan
+            ke React.js.
+          </p>
+
+          <h3>Skill</h3>
+          <ul class="skill-list">
+            <li>HTML5 &amp; CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js (belajar)</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: CONTACT -->
+      <!-- Di React, ini akan menjadi komponen <Contact /> -->
+      <section id="contact" class="page">
+        <h2 class="section-title">Kontak Saya</h2>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Masukkan nama kamu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nama@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tulis pesan kamu..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">Kirim Pesan</button>
+
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Nama Kamu. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
